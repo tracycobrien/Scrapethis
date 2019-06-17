@@ -16,7 +16,7 @@ var Articleschema = new Schema({
 	},
 	img: {
 		type: String,
-		// default: "/assets/images/unavailable.jpg"
+		// default: "/assets/images/url(../images/pink_rice.png);"
 	},
 	issaved: {
 		type: Boolean,
@@ -36,7 +36,7 @@ var Articleschema = new Schema({
 	}
 });
 
-Articleschema.index({title: "text"});
+Articleschema.index({ title: "text" });
 
-var Article  = mongoose.model("Article", Articleschema);
+var Article = mongoose.model("Article", Articleschema);
 module.exports = Article;
