@@ -54,7 +54,7 @@ app.get("/", function (req, res) {
 	Article.find({}, null, { sort: { created: -1 } }, function (err, data) {
 		res.render("index", { articles: data });
 		// if (data.length === 0) {
-		// 	res.render("placeholder", { message: "There's nothing scraped yet. Please click \"Scrape For Newest Articles\" for fresh and delicious news." });
+		// 	res.render("placeholder", { message: "There's nothing scraped yet. Please click \"Scrape For Newest Articles\" for hacker news." });
 		// }
 		// else {
 		// 	res.render("index", { articles: data });
@@ -113,7 +113,7 @@ app.get("/scrape", function (req, res) {
 app.get("/saved", function (req, res) {
 	Article.find({ issaved: true }, null, { sort: { created: -1 } }, function (err, data) {
 		if (data.length === 0) {
-			res.render("placeholder", { message: "You have not saved any articles yet. Try some slanted news by simply clicking \"Save Article\"!" });
+			res.render("placeholder", { message: "You have not saved any articles yet. Try some hacker news by simply clicking \"Save Article\"!" });
 		}
 		else {
 			res.render("saved", { saved: data });
