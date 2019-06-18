@@ -3,7 +3,7 @@
 
 ### Overview
 
-In this assignment, theoretically I created a web app that lets users view and leave comments on the latest news. But I didn't actually write any articles; instead, I used Mongoose and Cheerio  to scrape news from The Washington Post.
+In this assignment, theoretically I created a web app that lets users view and leave comments on the latest news. But I didn't actually write any articles; instead, I used Mongoose and Cheerio  to scrape news from Hacker News.
 
 ### Packages Used:
 
