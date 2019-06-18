@@ -3,6 +3,7 @@ function shownote(event) {
 	var id = $(this).attr("value");
 	$("#addnote").fadeIn(300).css("display", "flex");
 	$("#add-note").attr("value", id);
+
 	$.get("/" + id, function (data) {
 		$("#article-title").text(data.title);
 		$.get("/note/" + id, function (data) {
@@ -22,6 +23,7 @@ function addnote(event) {
 		title: $("#note-title").val().trim(),
 		body: $("#note-body").val().trim()
 	};
+	
 	$.post("/note/" + id, obj, function (data) {
 		window.location.href = "/saved";
 	});

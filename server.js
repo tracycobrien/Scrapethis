@@ -1,4 +1,5 @@
 // Dependencies
+require('dotenv').config()
 
 var express = require("express");
 var method = require("method-override");
@@ -15,14 +16,6 @@ var Note = require("./models/Note");
 var Article = require("./models/Article");
 var databaseUrl = 'mongodb://localhost/scrap';
 
-if (process.env.MONGODB_URI) {
-	mongoose.connect(process.env.MONGODB_URI);
-}
-else {
-	mongoose.connect(databaseUrl);
-};
-
-mongoose.Promise = Promise;
 var db = mongoose.connection;
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
@@ -72,13 +65,16 @@ app.get("/", function (req, res) {
 app.get("/scrape", function (req, res) {
 	request("https://news.ycombinator.com", function (error, response, html) {
 		var $ = cheerio.load(html);
-		var result = {};
+		var result = [];
 		// console.log($('.athing').html(), 'worked!');
 		// Find all the articles by their class name using Cheerio($)
 		$('.athing').each(function(index, row) {
 			var title = $(row).find('.title:last-child').find('a').text();
 			console.log(title);
+			result.push(title)
 		})
+
+		res.json(result)
 		// Create an array of all articles
 
 		// $("div.story-body").each(function (i, element) {
@@ -193,3 +189,4 @@ app.get("/note/:id", function (req, res) {
 
 	});
 });
+
