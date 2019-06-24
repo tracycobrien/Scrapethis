@@ -33,7 +33,7 @@ In this assignment, theoretically I created a web app that lets users view and l
 
      * URL - the url to the original article
 
-* **This assignment must be deployed.** I have attempt to complete homework assignment as described in instructions. I have sent all of my github updates to Heroku in an attempt to deploy the app. It currently runs on the local 3000 host when you hit the Scrape for the Newest Articles Button. I am proud of this bc I worked over 40 hours on this with help from other students, TA's, and our substitute teacher. It is not a complete assignment, but I know in the future I can start over from scratch with more knowledge and make it work. 
+* **This assignment must be deployed.** I have attempt to complete homework assignment as described in instructions. I have sent all of my github updates to Heroku in an attempt to deploy the app AND IT WORKS. It currently runs on the local 3000 host when you hit the Scrape for the Newest Articles Button. I am proud of this bc I worked over 40 hours on this with help from other students, TA's, and our substitute teacher. It is not a complete assignment, but I know in the future I can start over from scratch with more knowledge and make it work. 
 
 * [Heroku](https://scrapethis954.herokuapp.com/)
 
@@ -41,8 +41,11 @@ In this assignment, theoretically I created a web app that lets users view and l
 
 ---
 
-
+## Local host 3000
 ![Hacker News](screenshot.jpeg)
 ![Hacker News](screenshot2.jpeg)
-![[Hacker News](ScreenHeroku.jpeg)
+
+## Heroku
+![Hacker News](ScreenHeroku.jpeg) 
 ![Hacker News](ScreenHeroku2.jpeg) 
+
