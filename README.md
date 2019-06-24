@@ -44,3 +44,5 @@ In this assignment, theoretically I created a web app that lets users view and l
 
 ![Hacker News](screenshot.jpeg)
 ![Hacker News](screenshot2.jpeg)
+![[Hacker News](ScreenHeroku.jpeg)
+![Hacker News](ScreenHeroku2.jpeg) 
